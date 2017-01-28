@@ -2,6 +2,11 @@ mysql:
   image: mysql:latest
   ports:
     - 3306:3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=hoge
+    - MYSQL_PASSWORD=hogepass
+    - MYSQL_DATABASE=db
 rails:
   build: rails
   ports:
