@@ -1,0 +1,13 @@
+mysql:
+  image: mysql:latest
+  ports:
+    - 3306:3306
+rails:
+  build: rails
+  ports:
+    - 3000:3000
+  volumes:
+    - "$PWD:/usr/src/docker-rails-test"
+  links:
+    - mysql:mysql
+  tty: true
