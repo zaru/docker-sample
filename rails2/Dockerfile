@@ -3,7 +3,7 @@ FROM ruby:latest
 ENV LANG C.UTF-8
 
 RUN apt-get update && \
-        apt-get install -y nodejs && \
+        apt-get install -y nodejs \
         vim \
         build-essential \
         curl \
